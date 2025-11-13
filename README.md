@@ -23,7 +23,7 @@ which includes the bsdiff patch files required to do the pre-patching.
 
 ## Credits
 
-- Relies on the [Bsdiff library](https://github.com/Faithlife/bsdiff.net).
+- Relies on the [BsDiff library](https://github.com/Faithlife/bsdiff.net).
 
 ## License
 
