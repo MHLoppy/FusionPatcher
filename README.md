@@ -10,6 +10,8 @@ It's a quick-and-dirty implementation i.e., ugly, mostly unoptimized, and with
 very limited error handling. It's also my first time using the ancient 
 WinForms library/framework, so I don't even know what I'm doing.
 
+![](RoN fusion screenshot 01.png)
+
 The patching itself occurs in two parts:
 - A copy of the game exe is made, and a "pre-patch" is applied to the copy 
 that adds some handwritten assembly to the game exe. This assembly has been 
