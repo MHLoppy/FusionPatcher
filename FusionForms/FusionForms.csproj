@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>RoN fusion logo transparent.ico</ApplicationIcon>
+    <Version>0.2.1</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="RoN fusion logo transparent.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DeltaQ" Version="2.1.0" />
+  </ItemGroup>
+
+</Project>
