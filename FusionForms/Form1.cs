@@ -1,8 +1,8 @@
-using DeltaQ.BsDiff;
 using Microsoft.VisualBasic;    // for basic popups that support user input
 using Microsoft.Win32;
 using System.Diagnostics;
 using System.Security.Cryptography;
+using BsDiff;
 
 namespace FusionForms
 {
@@ -364,18 +364,18 @@ namespace FusionForms
                 }
             }
 
-            var baseData = File.ReadAllBytes(RoNPathTextBox.Text);
-            var fusionDelta = File.ReadAllBytes("riseofnations_fusion.delta");
+            string fusionDelta = "riseofnations_fusion.delta";
             if (laa)
             {
                 //int offsetFromEnd = 4;
                 //int insertPos = FusionPathTextBox.Text.Length - offsetFromEnd;
                 //FusionPathTextBox.Text = FusionPathTextBox.Text.Insert(insertPos, "_LAA");
 
-                fusionDelta = File.ReadAllBytes("riseofnations_fusion_laa.delta");
+                fusionDelta = "riseofnations_fusion_laa.delta";
             }
+            using var baseFile = File.OpenRead(RoNPathTextBox.Text);
             using var outStream = File.Create(FusionPathTextBox.Text);
-            Patch.Apply(baseData, fusionDelta, outStream);
+            BinaryPatch.Apply(baseFile, () => File.OpenRead(fusionDelta), outStream);
 
             return true;
         }
